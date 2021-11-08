@@ -28,11 +28,13 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+  Counter 1 has a count that can only be accessed through function scope. Counter 2 has a globally scoped counter.
   2. Which of the two uses a closure? How can you tell?
-  
+  Counter 1 uses a closer, The return function counter() reaches into countermaker to grab the variable count.
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?
+     Counter 1 would be used if the variable count was set to a specific number, only incrementing that number. This function is good if you want to start a count at a specific number.
+     Counter 2 would be used if the variable count is deployed on multiple parts of the code, function counter2 takes all the variables named count and changes it according to the function method.   
 */
 
 // counter1 code
